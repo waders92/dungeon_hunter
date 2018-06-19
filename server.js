@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', routes);
 
+app.get('/', (req, res) => {
+  res.render('index.html');
+});
 
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
