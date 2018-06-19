@@ -196,7 +196,7 @@ function updateMonsterHitPoints(oldAmount) {
 function deathCheckPlayer(hitpoints) {
   if (hitpoints <= 0) {
     document.getElementById("player-hitpoint-tally").innerHTML = "YOU DIED!";
-    document.getElementById("warrior-image").src = "img/dead.jpg";
+    document.getElementById("warrior-image").src = "images/dead.jpg";
     removeControlButtons();
     removeAttackText();
     playAgain();
@@ -206,7 +206,7 @@ function deathCheckPlayer(hitpoints) {
 function deathCheckMonster(hitpoints) {
   if (hitpoints <= 0) {
     document.getElementById("enemy-hitpoints").innerHTML = enemyName + " DIED!";
-    document.getElementById("monster-image").src = "img/dead.jpg";
+    document.getElementById("monster-image").src = "images/dead.jpg";
     removeControlButtons();
     removeAttackText();
     playAgain();

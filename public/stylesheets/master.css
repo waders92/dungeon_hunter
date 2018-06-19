@@ -1,0 +1,211 @@
+body {
+  font-family: 'Eagle Lake', cursive;
+  overflow-x: hidden;
+}
+
+.hero-image {
+  background-image: url("../images/dungeon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 1000px;
+  margin-top: -125px;
+}
+
+.game-title {
+  padding-top: 175px;
+  color: white;
+  font-size: 7rem;
+}
+
+.start-btn {
+  margin-top: 100px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  height: 35px;
+}
+
+.character-create {
+  height: 800px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+}
+
+.character-create h3, {
+  padding-top: 25px;
+}
+
+.game-board h3 {
+  padding-top: 25px;
+  margin-left: 40px;
+}
+
+
+.character-img,
+.character-stats {
+  border: 1px solid black;
+  height: 500px;
+}
+
+.character-create-buttons {
+  margin: 100px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.character-img img {
+  margin-top: 75px;
+  height: 45%;
+  width: 45%;
+  display: none;
+}
+
+.attribute-names,
+.attribute-stats {
+  margin-top: 100px;
+  display: none;
+}
+
+.attribute-names h4 {
+  margin: 20px;
+}
+
+.attribute-stats h4 {
+  margin: 20px;
+}
+
+.dice-buttons img {
+  width: 75%;
+  display: none;
+  cursor: pointer;
+}
+
+.dice-buttons h3 {
+  display: none;
+}
+
+#adventure-btn {
+  display: none;
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  height: auto;
+  font-size: 2em;
+}
+
+#character-name {
+  display: none;
+}
+
+.game-board {
+  height: 1000px;
+  background-color: black;
+  color: white;
+  margin-top: none;
+}
+
+.random-name {
+  border: none;
+}
+
+#character-stats,
+#dice-butons {
+  display: none;
+}
+
+#enemy-section {
+  display: none;
+}
+
+#game-board {
+  margin-top: -20px;
+}
+
+.control-buttons {
+  display: inline-block;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+#action-buttons {
+  display: none;
+}
+
+#monster-image {
+  display: none;
+}
+
+#monster-image-tagline {
+  display: none;
+}
+
+#caption {
+  display: none;
+}
+
+.clr {
+  clear: both;
+}
+
+p#player-combat-result,
+p#enemy-combat-result {
+  color: #00fa00;
+}
+
+#play-again-button {
+  display: none;
+}
+
+#attack-btn {
+  display: none;
+}
+
+#run-btn {
+  display: none;
+}
+
+#parry-btn {
+  display: none;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+#attack-text {
+  color: #00fa00;
+}
+
+.running-away {
+  background-color: black;
+  height: 2500px;
+  margin-top: -125px;
+  padding-top: 750px;
+}
+
+.running-away h3 {
+  color: white;
+}
+
+#run-img {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#run {
+  display: none;
+}
+
+#go-back {
+  display: none;
+}
