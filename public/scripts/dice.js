@@ -81,10 +81,10 @@ moveButton.addEventListener("click", function() {
   displayMovesTaken(characterSteps);
 })
 
-let runButton = document.querySelector("#run-btn");
-runButton.addEventListener("click", function() {
-  loadEnemyMocking();
-})
+// let runButton = document.querySelector("#run-btn");
+// runButton.addEventListener("click", function() {
+//   loadEnemyMocking();
+// })
 
 let parryButton = document.querySelector("#parry-btn");
 parryButton.addEventListener("click", function() {
@@ -130,7 +130,7 @@ hitpointsButton.addEventListener("click", function() {
   let value2 = 12;
   let hitpointsValue = (diceRoll(value1) + diceRoll(value2)) * 10;
   playerHitPoints = hitpointsValue;
-  monsterHitPointTotal = playerHitPoints;
+  monsterHitPointTotal = (hitpointsValue - (hitpointsValue * .10));
   document.getElementById("hitpoints-value").innerHTML = "HP:&nbsp;&nbsp;" + hitpointsValue;
 });
 
@@ -223,7 +223,7 @@ function removeAttackText() {
 
 function removeControlButtons() {
   document.getElementById("attack-btn").style.display = 'none';
-  document.getElementById("run-btn").style.display = 'none';
+  // document.getElementById("run-btn").style.display = 'none';
   document.getElementById("parry-btn").style.display = 'none';
   document.getElementById("play-again-button").style.display = 'inline';
 }
@@ -302,7 +302,7 @@ function loadAttackSequence() {
   document.getElementById("movement-update").style.display = 'none';
   document.getElementById("attack-btn").style.display = 'inline-block';
   document.getElementById("parry-btn").style.display = 'inline-block';
-  document.getElementById("run-btn").style.display = "inline-block";
+  // document.getElementById("run-btn").style.display = "inline-block";
 }
 
 function loadParrySequence() {
