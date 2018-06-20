@@ -163,6 +163,24 @@ p#enemy-combat-result {
   display: none;
 }
 
+#save-game {
+  display: none;
+  margin-top: 12px;
+  border: 1px solid white;
+}
+
+#real-player-name {
+  margin-top: 20px;
+}
+
+#save-game-btn {
+  margin-bottom: 20px;
+}
+
+/* input[type="text"] { 
+  border: none 
+} */
+
 #attack-btn {
   display: none;
 }

@@ -6,6 +6,7 @@ let attackCounter = 0;
 let moveCounter = 0;
 let playerHitPoints = 0;
 let monsterHitPointTotal = playerHitPoints;
+let characterName;
 
 function diceRoll(value) {
   return Math.floor((Math.random() * value + 1));
@@ -30,6 +31,7 @@ function nameSelector() {
 
   let result = diceRoll(value);
   let randomName = availableNames[result];
+  characterName = randomName;
   return randomName;
 }
 
@@ -200,6 +202,7 @@ function deathCheckPlayer(hitpoints) {
     removeControlButtons();
     removeAttackText();
     playAgain();
+    loadGameSaveForm();
   }
 }
 
@@ -210,11 +213,18 @@ function deathCheckMonster(hitpoints) {
     removeControlButtons();
     removeAttackText();
     playAgain();
+    loadGameSaveForm();
   }
 }
 
 function playAgain() {
   document.getElementById("play-again-button").style.display = 'inline';
+}
+
+function loadGameSaveForm() {
+  document.getElementById("save-game").style.display = "block";
+  document.getElementById("form-rounds").value = attackCounter + 1;
+  document.getElementById("char-name").value = characterName;
 }
 
 function removeAttackText() {

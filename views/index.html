@@ -90,6 +90,15 @@
                 <input type="button" onClick="history.go(0)" value="Play Again!">
               </form>
             </center>
+              <form id="save-game" action ="/save" name = saveGame method = "POST">
+                Enter Your Name:
+                <input id="real-player-name" type="text" name="Enter Your Name"><br><br>
+                Character Name:
+                <input id="char-name" type="text" name="Enter Name" style="border: none;"><br><br>
+                Total Rounds:
+                <input id="form-rounds" type="text" name="Total Rounds" style="border: none;"><br><br>
+                <input id="save-game-btn" type="submit" value="Save Game">
+              </form>
           </figure>
         </section>
       </div>
