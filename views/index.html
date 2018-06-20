@@ -90,14 +90,14 @@
                 <input type="button" onClick="history.go(0)" value="Play Again!">
               </form>
             </center>
-              <form id="save-game" action ="/save" name = saveGame method = "POST">
+              <form id="save-game" action ="/" name=gameForm method = "POST">
                 Enter Your Name:
-                <input id="real-player-name" type="text" name="Enter Your Name"><br><br>
+                <input id="real-player-name" type="text" name="player"><br><br>
                 Character Name:
-                <input id="char-name" type="text" name="Enter Name" style="border: none;"><br><br>
+                <input id="char-name" type="text" name="character" style="border: none;"><br><br>
                 Total Rounds:
-                <input id="form-rounds" type="text" name="Total Rounds" style="border: none;"><br><br>
-                <input id="save-game-btn" type="submit" value="Save Game">
+                <input id="form-rounds" type="text" name="rounds" style="border: none;"><br><br>
+                <input id="save-game-btn" type="submit" onclick="return saveGame()" value="Save Game">
               </form>
           </figure>
         </section>
@@ -116,6 +116,7 @@
     <script src="scripts/fadein.js "></script>
     <script src="scripts/scroll.js "></script>
     <script src="scripts/hide.js "></script>
+    <script src="scripts/formCheck.js"></script>
   </body>
 
 </html>
