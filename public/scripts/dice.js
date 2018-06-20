@@ -5,7 +5,7 @@ let enemyImage = "";
 let attackCounter = 0;
 let moveCounter = 0;
 let playerHitPoints = 0;
-let monsterHitPointTotal = 0;
+let monsterHitPointTotal = playerHitPoints;
 
 function diceRoll(value) {
   return Math.floor((Math.random() * value + 1));
@@ -130,7 +130,7 @@ hitpointsButton.addEventListener("click", function() {
   let value2 = 12;
   let hitpointsValue = (diceRoll(value1) + diceRoll(value2)) * 10;
   playerHitPoints = hitpointsValue;
-  monsterHitPointTotal = playerHitPoints - diceRoll(20);
+  monsterHitPointTotal = playerHitPoints;
   document.getElementById("hitpoints-value").innerHTML = "HP:&nbsp;&nbsp;" + hitpointsValue;
 });
 
