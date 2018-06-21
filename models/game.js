@@ -2,10 +2,12 @@ const mongoose = require('mongoose');
 
 var playerSchema = new mongoose.Schema ({
   player_name: {
-    type: String
+    type: String,
+    required: 'Field can not be blank'
   },
   character_name: {
-    type: String
+    type: String,
+    required: 'Field can not be blank'
   },
   rounds: {
     type: Number,
