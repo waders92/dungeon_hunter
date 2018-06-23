@@ -2,6 +2,10 @@
     <div class="container">
       <div class="scores">
         <h4>High Scores</h4>
+        <br>
+         {{#each result}}
+            <p>{{player_name}},  {{character_name}}, {{rounds}}</p>
+        {{/each}}
       </div>
     </div>
 

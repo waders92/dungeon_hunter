@@ -304,7 +304,7 @@ function loadAttackSequence() {
   document.getElementById("enter-dungeon-text").style.display = 'none';
   document.getElementById("monster-image").style.display = 'block';
   document.getElementById("monster-display-name").style.display = 'block';
-  document.getElementById("attack-text").innerHTML = "A " + enemyName.toUpperCase() + " attacks you!<br>(ATTACK, PARRY or RUN?)";
+  document.getElementById("attack-text").innerHTML = "A " + enemyName.toUpperCase() + " attacks you!<br>(ATTACK or PARRY)";
   document.getElementById("monster-image").src = enemyImage;
   document.getElementById("monster-display-name").innerHTML = enemyName;
   document.getElementById("enemy-hitpoints").innerHTML = enemyName + " hitpoints: &nbsp;&nbsp&nbsp;" + monsterHitPointTotal;

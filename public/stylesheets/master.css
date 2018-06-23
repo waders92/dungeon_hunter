@@ -27,6 +27,14 @@ body {
   height: 35px;
 }
 
+.scores-btn {
+  margin-top: 25px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  height: 35px;
+}
+
 .character-create {
   height: 800px;
   border: 1px solid black;
