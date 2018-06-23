@@ -227,3 +227,7 @@ input {
 #go-back {
   display: none;
 }
+
+.scores {
+  margin-top: 100px;
+}

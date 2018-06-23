@@ -10,4 +10,12 @@ exports.createGame = function(req, res) {
   });
 }
 
+exports.showScores = function(req, res) {
+  db.PlayerScore.find()
+  .then(function(data){
+    res.render('scores.hbs');
+  });
+
+}
+
 module.exports = exports;
