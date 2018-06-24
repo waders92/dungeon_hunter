@@ -4,7 +4,7 @@ const db = require('../models');
 exports.createGame = function(req, res) {
   db.PlayerScore.create(req.body)
   .then(function(){
-    res.render('index');
+    res.render('confirmation');
   })
   .catch(function(err){
     res.send(err);
