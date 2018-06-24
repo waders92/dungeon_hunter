@@ -3,7 +3,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 const routes = require('./routes/app.js');
 const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars').create({ defaultLayout: 'main', extname: '.hbs' });
+const exphbs = require('express-handlebars').create({ defaultLayout: 'main', extname: '.hbs',  helpers: {
+  formatDate: function (date, format) {
+      return moment(date).format("MMM Do YYYY");
+    } 
+  }
+});
 
 
 app.use(express.static(__dirname + '/public'));
