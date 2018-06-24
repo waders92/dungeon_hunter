@@ -1,11 +1,25 @@
-
-    <div class="container">
-      <div class="scores">
-        <h4>High Scores</h4>
-        <br>
-         {{#each result}}
-            <p>{{player_name}},  {{character_name}}, {{rounds}}</p>
-        {{/each}}
-      </div>
-    </div>
-
+<div class="container">
+  <div class="scores">
+    <h4>High Scores</h4>
+    <br>
+    <table class="table1">
+      <tr class="table-title">
+        <th>Player Name</th>
+        <th>Character Name</th>
+        <th>Rounds</th>
+        <th>Date</th>
+      </tr>
+      {{#each result}}
+      <tr>
+        <td>{{player_name}}</td>
+        <td>{{character_name}}</td>
+        <td>{{rounds}}</td>
+        <td>{{created_date}}</td>
+      </tr>
+       {{/each}}
+    </table>
+  </div>
+</div>
+<div class="container">
+  <a href='/'>Back to the game!</a>
+</div>

@@ -1,0 +1,27 @@
+.table1 {
+  color: black;
+  margin-bottom: 50px;
+  width: 90%;
+  font-size: 10px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.table1 tr:first-child{
+  background-color: white;
+  color: black;
+}
+
+.table1 tr:nth-child(even) {
+/*  background-color: rgba(221, 221, 221, 0.77);
+*/color: black;
+  background-color: #8bc34a6b
+};
