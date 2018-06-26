@@ -6,30 +6,9 @@ $(document).ready(function() {
   });
 });
 
-$("#constitution").click(function() {
-  $("#constitution").hide("slow");
-  $("#strength").show("fast");
-});
-
-$("#strength").click(function() {
-  $("#strength").hide("slow");
-  $("#dexterity").show("fast");
-});
-
-$("#dexterity").click(function() {
-  $("#dexterity").hide("slow");
-  $("#intelligence").show("fast");
-});
-
-$("#intelligence").click(function() {
-  $("#intelligence").hide("slow");
-  $("#hitpoints").show("fast");
-});
-
-$("#hitpoints").click(function() {
-  $("#hitpoints").hide("slow");
-  $("#adventure-btn").show("fast");
-  $("#roll-intro").hide("fast");
+$("#all-stats").click(function() {
+  $("#all-stats").hide("slow");
+  $("#adventure-btn").show("slow");
 });
 
 $("#character-name").click(function() {
@@ -37,7 +16,8 @@ $("#character-name").click(function() {
   $("#random-name").show("fast");
   $("#character-stats").show("fast");
   $("#roll-intro").show("fast");
-  $("#constitution").show("fast");
+  $("#all-stats").show("fast");
+  
 });
 
 $("#adventure-btn").click(function(){

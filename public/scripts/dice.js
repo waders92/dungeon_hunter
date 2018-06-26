@@ -83,11 +83,6 @@ moveButton.addEventListener("click", function() {
   displayMovesTaken(characterSteps);
 })
 
-// let runButton = document.querySelector("#run-btn");
-// runButton.addEventListener("click", function() {
-//   loadEnemyMocking();
-// })
-
 let parryButton = document.querySelector("#parry-btn");
 parryButton.addEventListener("click", function() {
   loadParrySequence();
@@ -98,43 +93,27 @@ nameSelectorButton.addEventListener("click", function() {
   document.getElementById("random-name").innerHTML = nameSelector();
 });
 
-let constitutionButton = document.querySelector("#constitution");
-constitutionButton.addEventListener("click", function() {
+let allStatsBtn = document.querySelector("#all-stats");
+allStatsBtn.addEventListener("click", function() {
   let value = 20;
-  let constitutionValue = diceRoll(value) + diceRoll(value);
-  document.getElementById("constitution-value").innerHTML = "Con:&nbsp;&nbsp;" + constitutionValue;
-});
-
-let strengthButton = document.querySelector("#strength");
-strengthButton.addEventListener("click", function() {
-  let value = 20;
-  let strengthValue = diceRoll(value) + diceRoll(value);
-  document.getElementById("strength-value").innerHTML = "Str:&nbsp;&nbsp;" + strengthValue;
-});
-
-let dexterityButton = document.querySelector("#dexterity");
-dexterityButton.addEventListener("click", function() {
-  let value = 20;
-  let dexterityValue = diceRoll(value) + diceRoll(value);
-  document.getElementById("dexterity-value").innerHTML = "Dex:&nbsp;&nbsp;" + dexterityValue;
-});
-
-let intelligenceButton = document.querySelector("#intelligence");
-intelligenceButton.addEventListener("click", function() {
-  let value = 20;
-  let intelligenceValue = diceRoll(value);
-  document.getElementById("intelligence-value").innerHTML = "Int:&nbsp;&nbsp;" + intelligenceValue;
-});
-
-let hitpointsButton = document.querySelector("#hitpoints");
-hitpointsButton.addEventListener("click", function() {
-  let value1 = 20;
   let value2 = 12;
-  let hitpointsValue = (diceRoll(value1) + diceRoll(value2)) * 10;
+  let constitutionValue = diceRoll(value) + diceRoll(value);
+  let strengthValue = diceRoll(value) + diceRoll(value);
+  let dexterityValue = diceRoll(value) + diceRoll(value);
+  let intelligenceValue = diceRoll(value);
+  let hitpointsValue = (diceRoll(value) + diceRoll(value2)) * 10;
   playerHitPoints = hitpointsValue;
   monsterHitPointTotal = (hitpointsValue - (hitpointsValue * .10));
-  document.getElementById("hitpoints-value").innerHTML = "HP:&nbsp;&nbsp;" + hitpointsValue;
+  displayPlayerStats(constitutionValue, strengthValue, dexterityValue, intelligenceValue, hitpointsValue)
 });
+
+function displayPlayerStats(constitutionValue, strengthValue, dexterityValue, intelligenceValue, hitpointsValue) {
+  document.getElementById("constitution-value").innerHTML = "Con:&nbsp;&nbsp;" + constitutionValue;
+  document.getElementById("strength-value").innerHTML = "Str:&nbsp;&nbsp;" + strengthValue;
+  document.getElementById("dexterity-value").innerHTML = "Dex:&nbsp;&nbsp;" + dexterityValue;
+  document.getElementById("intelligence-value").innerHTML = "Int:&nbsp;&nbsp;" + intelligenceValue;
+  document.getElementById("hitpoints-value").innerHTML = "HP:&nbsp;&nbsp;" + hitpointsValue;
+}
 
 let attackButton = document.querySelector("#attack-btn");
 attackButton.addEventListener("click", function() {
