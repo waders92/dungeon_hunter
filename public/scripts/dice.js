@@ -77,24 +77,24 @@ function enemySelector() {
 }
 
 let moveButton = document.querySelector("#move-btn");
-moveButton.addEventListener("click", function() {
+moveButton.addEventListener("click", function () {
   characterMoveResult();
   let characterSteps = moveCounter += 1;
   displayMovesTaken(characterSteps);
 })
 
 let parryButton = document.querySelector("#parry-btn");
-parryButton.addEventListener("click", function() {
+parryButton.addEventListener("click", function () {
   loadParrySequence();
 })
 
 let nameSelectorButton = document.querySelector("#character-name");
-nameSelectorButton.addEventListener("click", function() {
+nameSelectorButton.addEventListener("click", function () {
   document.getElementById("random-name").innerHTML = nameSelector();
 });
 
 let allStatsBtn = document.querySelector("#all-stats");
-allStatsBtn.addEventListener("click", function() {
+allStatsBtn.addEventListener("click", function () {
   let value = 20;
   let value2 = 12;
   let constitutionValue = diceRoll(value) + diceRoll(value);
@@ -116,7 +116,7 @@ function displayPlayerStats(constitutionValue, strengthValue, dexterityValue, in
 }
 
 let attackButton = document.querySelector("#attack-btn");
-attackButton.addEventListener("click", function() {
+attackButton.addEventListener("click", function () {
   let playerAttack = attackRoll();
   let damage = calculateDamage(playerAttack);
   let monsterUpdate = updateMonsterHitPoints(damage);
@@ -204,6 +204,12 @@ function loadGameSaveForm() {
   document.getElementById("save-game").style.display = "block";
   document.getElementById("form-rounds").value = attackCounter + 1;
   document.getElementById("char-name").value = characterName;
+  if (playerHitPoints >= 0) {
+    document.getElementById("remaining-hitpoints").value = playerHitPoints;
+  }
+  else {
+    document.getElementById("remaining-hitpoints").value = 0;
+  }
 }
 
 function removeAttackText() {
@@ -242,7 +248,7 @@ function displayBattleRounds(rounds) {
   document.getElementById("battle-rounds").innerHTML = "Rounds: " + rounds;
 }
 
-function displayMovesTaken(moves){
+function displayMovesTaken(moves) {
   console.log(moves);
   document.getElementById("total-steps").innerHTML = "Steps: " + moves;
 }

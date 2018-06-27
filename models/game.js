@@ -13,6 +13,10 @@ var playerSchema = new mongoose.Schema ({
     type: Number,
     default: false
   },
+  remaining_hitpoints: {
+    type: Number,
+    default: false
+  },
   created_date: {
     type: Date,
     default: Date.now
