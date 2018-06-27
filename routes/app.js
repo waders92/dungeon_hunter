@@ -4,6 +4,7 @@ const helper = require('../helper/app');
 
 
 router.route('/')
+.get(helper.getHomePage)
 .post(helper.createGame)
 
 router.route('/scores')

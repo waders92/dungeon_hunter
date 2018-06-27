@@ -12,10 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', routes);
 
-app.get('/', (req, res) => {
-  res.render('index.hbs');
-});
-
 app.engine('hbs', exphbs.engine);
 app.set('view engine', 'hbs');
 
