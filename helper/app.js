@@ -4,7 +4,6 @@ exports.getHomePage = function(req, res){
   res.render('index.hbs');
 }
 
-
 exports.createGame = function(req, res) {
   db.PlayerScore.create(req.body)
   .then(function(){
