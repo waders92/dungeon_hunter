@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var dbUrl =  'mongodb://localhost:27017/dungeon-hunter';
+var keys = require('../keys.js');
+var dbUrl =  'mongodb://' + keys.NAME + ':' + keys.PASSWORD + '@ds123171.mlab.com:23171/dungeon-hunter';
 mongoose.set('debug', true);
 mongoose.connect(dbUrl);
 
